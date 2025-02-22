@@ -17,7 +17,7 @@
 
 ### **1️⃣ Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/Link_dumper.git
+git clone https://github.com/walidzitouni/Link_dumper.git
 cd Link-Dumper
 ````
 
