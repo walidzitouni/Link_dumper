@@ -1,4 +1,5 @@
 # Link Dumper - Web Crawler for Extracting Links and JavaScript Files
+![Alt Text](screenshot.png)
 
 ## 📌 Overview
 **Link Dumper** is a powerful Python-based web crawler designed for **pentesting and reconnaissance**. It scans websites for URLs and extracts **JavaScript (.js), text (.txt), JSON (.json), and XML (.xml)** files. This is useful for **subdomain enumeration, API key discovery, and security analysis**.
@@ -6,7 +7,8 @@
 ## 🚀 Features
 - ✅ **Extracts URLs** from `<a>` and `<script>` tags  
 - ✅ **Finds JavaScript files** that might contain sensitive data  
-- ✅ **Crawls additional links** recursively for deeper analysis  
+- ✅ **Crawls additional links** recursively for deeper analysis
+- ✅ **Extracts API keys & version numbers from JavaScript files**
 - ✅ **Saves results in JSON format** for further processing  
 - ✅ **Handles relative and absolute links** automatically  
 - ✅ **Multi-threaded crawling** for fast performance  
