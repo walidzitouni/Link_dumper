@@ -1,5 +1,8 @@
 #!/bin/bash
+echo "                                             
 
+
+"
 # Define colors (dark purple to light pink gradient)
 DARK_PURPLE="\033[38;5;55m"  # Dark Purple
 PURPLE_2="\033[38;5;93m"     # Slightly lighter purple
@@ -13,17 +16,17 @@ RESET="\033[0m"              # Reset color
 TOOLS_DIR="./tools"
 
 # Display Banner with Gradient
-echo -e "${DARK_PURPLE}███╗   ██╗ █████╗ ██████╗  ██████╗ ██╗     ██╗ ██╗██████╗ ███████╗██████╗${RESET}"
+echo -e "   ${DARK_PURPLE}███╗   ██╗ █████╗ ██████╗  ██████╗ ██╗     ██╗ ██╗██████╗ ███████╗██████╗${RESET}"
 sleep 0.3
-echo -e "${PURPLE_2}████╗  ██║██╔══██╗██╔══██╗██╔═══██╗██║     ██║███║╚════██╗╚════██║╚════██╗${RESET}"
+echo -e "   ${PURPLE_2}████╗  ██║██╔══██╗██╔══██╗██╔═══██╗██║     ██║███║╚════██╗╚════██║╚════██╗${RESET}"
 sleep 0.3
-echo -e "${PURPLE_3}██╔██╗ ██║███████║██████╔╝██║   ██║██║     ██║╚██║ █████╔╝    ██╔╝ █████╔╝${RESET}"
+echo -e "   ${PURPLE_3}██╔██╗ ██║███████║██████╔╝██║   ██║██║     ██║╚██║ █████╔╝    ██╔╝ █████╔╝${RESET}"
 sleep 0.3
-echo -e "${PURPLE_4}██║╚██╗██║██╔══██║██╔═══╝ ██║   ██║██║     ██║ ██║ ╚═══██╗   ██╔╝ ██╔═══╝ ${RESET}"
+echo -e "   ${PURPLE_4}██║╚██╗██║██╔══██║██╔═══╝ ██║   ██║██║     ██║ ██║ ╚═══██╗   ██╔╝ ██╔═══╝ ${RESET}"
 sleep 0.3
-echo -e "${PINK_1}██║ ╚████║██║  ██║██║     ╚██████╔╝███████╗██║ ██║██████╔╝   ██║  ███████╗${RESET}"
+echo -e "   ${PINK_1}██║ ╚████║██║  ██║██║     ╚██████╔╝███████╗██║ ██║██████╔╝   ██║  ███████╗${RESET}"
 sleep 0.3
-echo -e "${PINK_2}╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═╝╚═════╝    ╚═╝  ╚══════╝${RESET}"
+echo -e "   ${PINK_2}╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═╝╚═════╝    ╚═╝  ╚══════╝${RESET}"
 sleep 0.5
 
 
@@ -31,9 +34,10 @@ while true; do
   # Display the menu with the same gradient colors
   echo -e "\n${DARK_PURPLE}#═╦═══════» ${PINK_1}[1] Link Dumper (domain)${RESET}"
   echo -e "${PURPLE_2}╚═╦══════» ${PINK_2}[2] Link Dumper (file)${RESET}"
-  echo -e "${PURPLE_3}╚═╦═════» ${PINK_1}[3] help${RESET}"
-  echo -e "${PURPLE_4}╚═╦═════» ${PINK_2}[4] Exit${RESET}"
-  echo -n -e "${RESET}Choose an option: "
+  echo -e "${PURPLE_3}╚═╦══════» ${PINK_1}[3] Sensetive data Extractor${RESET}"
+  echo -e "${PURPLE_4}╚═╦═════» ${PINK_2}[4] help${RESET}"
+  echo -e "${PINK_2}╚═╦═════» ${PINK_2}[5] Exit${RESET}"
+  echo -n -e "${DARK_PURPLE}Choose an option:${RESET} "
   
   read -r choice
 
@@ -57,6 +61,15 @@ while true; do
       fi
       ;;
     3)
+      # Data Extractor (assuming it's in the tools folder)
+      if [ -f "$TOOLS_DIR/Data_Extractor.py" ]; then
+        echo -e "${PURPLE_3}Running Data_Extractor Tool...${RESET}"
+        python3 "$TOOLS_DIR/Data_Extractor.py"
+      else
+        echo -e "${PINK_2}Tool not found in the folder!${RESET}"
+      fi
+      ;;
+    4)
       # Execute help (assuming it's in the tools folder)
       if [ -f "$TOOLS_DIR/help.sh" ]; then
         echo -e "${PURPLE_3}Running Bypass Tool...${RESET}"
@@ -65,7 +78,7 @@ while true; do
         echo -e "${PINK_2}Tool not found in the folder!${RESET}"
       fi
       ;;
-    4)
+    5)
       echo -e "${PINK_2}Exiting...${RESET}"
       break
       ;;
@@ -74,4 +87,3 @@ while true; do
       ;;
   esac
 done
-
