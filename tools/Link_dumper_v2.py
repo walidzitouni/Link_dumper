@@ -1,4 +1,5 @@
 import requests
+import urllib3
 import scrapy
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, urljoin
@@ -6,6 +7,9 @@ import tldextract
 import concurrent.futures
 import os
 import json
+
+# Suppress InsecureRequestWarning when making HTTPS requests with verify=False
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 #::main::
 file_links = []  # default links
