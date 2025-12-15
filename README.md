@@ -108,7 +108,7 @@ The author takes **no responsibility** for any misuse of this tool.
 
 ## 👤 Author
 
-- **Your Name** (`@Napoli1372 aka walidzitouni`)
+- **Name** (`@Napoli1372 aka walidzitouni`)
 - LinkedIn: [Your Profile](https://www.linkedin.com/in/walid-zitouni-634809299/)
 - Twitter: [Your Profile](https://x.com/walidzitouni04)
 
